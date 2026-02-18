@@ -1,0 +1,22 @@
+framework:
+  name: "UAsk GenAI QA Automation"
+  version: "1.0.0"
+
+llm:
+  provider: "openai"
+  model: "gpt-4-turbo"
+  temperature: 0.7
+  max_tokens: 2000
+  timeout: 15
+
+evaluation:
+  methods:
+    - json_validation
+    - semantic_similarity
+    - ragas_metrics
+    - business_rules
+    - hallucination_detection
+
+performance:
+  max_latency_seconds: 10
+  max_tokens_per_request: 2000
